@@ -55,9 +55,9 @@ public class ServerVerticle extends AbstractVerticle {
       }
     });
     // TODO agregar checkeo con la base de datos
-    healthCheckWithProcedures.register("database/check", statusFuture -> {
-      statusFuture.complete(Status.OK(new JsonObject().put("online", "YES")));
-    });
+    healthCheckWithProcedures.register("database/check", statusFuture ->
+      statusFuture.complete(Status.OK(new JsonObject().put("online", "YES")))
+    );
     healthCheckWithProcedures.register("memory/free-memory", 3000, statusFuture -> {
       int freeMemory = 255;// MB
       statusFuture.complete(Status.OK(new JsonObject().put("free", freeMemory)));
