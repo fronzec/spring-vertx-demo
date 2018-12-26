@@ -64,6 +64,7 @@
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
+    <!--TODO change to postgres or other realdatabase-->
     <dependency>
       <groupId>com.h2database</groupId>
       <artifactId>h2</artifactId>
@@ -92,6 +93,12 @@
       <artifactId>junit-platform-launcher</artifactId>
       <version>${junit-platform-launcher.version}</version>
       <scope>test</scope>
+    </dependency>
+    <!--Privides health check-->
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-health-check</artifactId>
+      <version>3.6.2</version>
     </dependency>
   </dependencies>
 
